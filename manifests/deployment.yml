@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: correocglazchcaptureorder 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: correocglazchcaptureorder 
+    spec:
+      containers:
+        - name: correocglazchcaptureorder 
+          image: laboratorio.azurecr.io/correocglazchcaptureorder
+          ports:
+          - containerPort: 8080
